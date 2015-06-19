@@ -4,8 +4,8 @@
 ###### Course Project Getting and Cleaning Data ######
 ######################################################
 
-# The following explanation has been included in the R code to help readers to understand the aim
-# of each code line.
+The following explanation has been included in the R code to help readers to understand the aim
+of each code line.
 
 # Be aware to load al the necesary libraries to run the code without error messages 
 
