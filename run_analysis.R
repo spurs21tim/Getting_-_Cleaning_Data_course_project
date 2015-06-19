@@ -6,8 +6,8 @@
 library(RCurl)
 library(plyr)
 
-# First of all I am going to create a folder to save the data neede for the project
-# and set the path to run the scrip. Please be aware of changing the path in which 
+# Before starting I have created a folder to save the data needed for the project
+# and set the path to run into the scrip. Please be aware of changing the path in which 
 # you have saved your files in your computer.
 # My path: "C:/Users/Alejandro-Casa/Documents/Coursera/GettingandCleaningData/Course_Project/UCI_HAR_Dataset"
 
@@ -17,14 +17,14 @@ setwd(path)
 # download.file(dataFile, "UCI-HAR-dataset.zip", method="wininet")
 # unzip('./UCI-HAR-dataset.zip')
 
-#### First taks: Merges the training and the test sets to create one data set;
-# Accordign the "README.txt" only files "X_text.txt" in both, train and test folders, 
-# contains sets of data which variables are listed in "feautres.txt". Therefore, 
-# I only merge this to files into one. We can check that by reading into R the
-# txt files. For instance: "features.txt" have 561 objectes that coressponds to 
-# the 561 varaibles of "x.train.txt".
+#### First task: join the train and test sets to create one data set.
+# According the "README.txt" only files "X_text.txt" in both ,train and test folders, 
+# contains sets of data which variables are listed in "features.txt". Therefore, 
+# I only join these to files into one. We can check it by reading into R the
+# txt files. For instance: "features.txt" has 561 objects that correspond to 
+# the 561 variables of "x.train.txt".
 
-# Selection of train and test files and reading both tables
+# Selection of train and test files; reading both tables using read.table
 path_test <- paste (path, "test/X_test.txt", sep = "/", collapse = NULL)
 path_train <- paste (path, "train/X_train.txt", sep = "/", collapse = NULL)
 
@@ -39,27 +39,26 @@ data_join = rbind(x.test,x.train)
 # Alternatively as a list
 # data_join1 = list(x.test,x.train)
 
-#### Second Task: Extracts only the measurements on the mean and standard deviation for each measurement.
-# Here we have to extrack from "data_join" the variables which gives values of mean and standard deviation, 
+#### Second Task: Extraction of the measurements on the mean and standard deviation for each measurement. 
+# Here we have to extract from "data_join" the variables which give values of mean and standard deviation, 
 # according the guidelines given in "features_info.txt"
 path_features <- paste (path, "features.txt", sep = "/", collapse = NULL)
 x.features <- read.table(path_features)
 
-# Now I want to identify which are the variables with mean values. ("grep" function returns factors)
+# Identification of variables with mean values. ("grep" function returns factors)
 x_mean <- grep("\\b-mean()\\b", x.features[,2])
 
-# Now I want to identify which are the variables with standard deviation values ("grep" function returns factors)
+# Identification of variables with standard deviation values ("grep" function returns factors)
 x_std <- grep("\\b-std()\\b", x.features[,2])
 
-# Now I get only the varaibles with mean and std 
+# Getting only the variables with mean and std from data.frame object calculated at the end of First task
 data_join_mean = data_join[,x_mean]
 data_join_std = data_join[,x_std]
 
-#### Third task: Uses descriptive activity names to name the activities in the data set
+#### Third task:  Use of descriptive activity names to name the activities in the data set.
 # We have six activities according to "activities_labels.txt". In file "y_test.txt" and 
 # "y_train.txt", each activity is assigned to the objects (rows) listed in "x_train.txt" 
-# and "x_test.txt". What I have to do is to link those activity names to data_join set
-
+# and "x_test.txt". What I have to do is to link those activity names to data_join set (variable).
 path_activity <- paste (path, "activity_labels.txt", sep = "/", collapse = NULL)
 path_test_y <- paste (path, "test/y_test.txt", sep = "/", collapse = NULL)
 path_train_y <- paste (path, "train/y_train.txt", sep = "/", collapse = NULL)
@@ -120,15 +119,15 @@ data_set_std <- cbind(row_names,data_join_std)
 data_set_mean <- rbind(column_name_mean1,data_set_mean[1:length(x.test[,1]),], column_name_mean2, data_set_mean[(length(x.test[,1])+1):length(data_set_mean[,1]),])
 data_set_std <- rbind(column_name_std1,data_set_std[1:length(x.test[,1]),], column_name_std2, data_set_std[(length(x.test[,1])+1):length(data_set_std[,1]),])
 
-# Final Tidy data
+# Final Tidy data set
 complete_data_set <- cbind(data_set_mean,data_set_std)
 
 #### Fourth task: Appropriately labels the data set with descriptive variable names. 
 # It was already done in Third task
 
 #### Fifth Task: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+# Arrange the data in order to be able to calculate the mean of each variable according to the activity.
 
-#I have arrange the data in order to be able to calculate the mean of each varaible according the activitiy
 # Creating object with Mean values
 test_data1 <- cbind(y.test,data_join_mean[1:length(x.test[,1]),])
 test_data2 <- cbind(y.train,data_join_mean[length(x.test[,1])+1:length(x.train[,1]),])
