@@ -49,3 +49,6 @@ The principal outcome of the script are the variables "complete_data_test" and "
 2. "Complete_subset": average of the observations by activity.
 
 Please check the txt files include in the zip file for further information of the above features.
+
+####Please Note that:
+Features are normalized and bounded within [-1,1].
