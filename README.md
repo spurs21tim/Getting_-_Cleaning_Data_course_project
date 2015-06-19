@@ -1,14 +1,12 @@
 #### Course Project Getting and Cleaning Data
 
 The following explanation has been included in the R code to help readers to understand the aim
-of each code line.
+of each code line.Be aware to load al the necesary libraries to run the code without error messages. 
 
-# Be aware to load al the necesary libraries to run the code without error messages 
-
-# First of all I am going to create a folder to save the data neede for the project
-# and set the path to run the scrip. Please be aware of changing the path in which 
+# Before starting I have created a folder to save the data needed for the project
+# and set the path to run into the scrip. Please be aware of changing the path in which 
 # you have saved your files in your computer.
-# My path: "C:/Users/Alejandro-Casa/Documents/Coursera/GettingandCleaningData/Course_Project/UCI_HAR_Dataset"
+# My path: "C:/~~/Coursera/GettingandCleaningData/Course_Project/UCI_HAR_Dataset"
 
 #### First taks: Merges the training and the test sets to create one data set;
 # Accordign the "README.txt" only files "X_text.txt" in both, train and test folders, 
