@@ -44,7 +44,7 @@ b) Each column will be labeled with the variable name
 #### Fourth task: Appropriately labels the data set with descriptive variable names. 
 It was already done in Third task
 
-#### Fiveth Task: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+#### Fifth Task: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 I have arrange the data in order to be able to calculate the mean of each varaible according to the activitiy
 
 ####Steps:
