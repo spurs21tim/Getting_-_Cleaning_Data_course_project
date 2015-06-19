@@ -23,7 +23,7 @@ the 561 varaibles of "x.train.txt".
 Here we have to extrack from "data_join" the variables which gives values of mean and standard deviation, 
 according the guidelines given in "features_info.txt"
 
-#Steps:
+####Steps:
 1. Identification of variables with mean values. ("grep" function returns factors)
 2. Identification of variables with standard deviation values ("grep" function returns factors)
 3. Getting only the varaibles with mean and std from data.frame object calculated at the end of First task 
@@ -33,7 +33,7 @@ We have six activities according to "activities_labels.txt". In file "y_test.txt
 "y_train.txt", each activity is assigned to the objects (rows) listed in "x_train.txt" 
 and "x_test.txt". What I have to do is to link those activity names to data_join set
 
-#Steps:
+####Steps:
 1. Naming labels with activities
 2. Name the data set "data_join_mean" and "data_join_std" as follows: 
 a) I will add a column to include the name of the activity for each measurement
@@ -47,7 +47,7 @@ It was already done in Third task
 #### Fiveth Task: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 I have arrange the data in order to be able to calculate the mean of each varaible according to the activitiy
 
-#Steps:
+####Steps:
 1. Creating object with Mean values
 2. Creating object with Standard desviation values
 3. Calculation of mean of each variable for each activity
