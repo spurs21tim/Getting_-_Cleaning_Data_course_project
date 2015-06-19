@@ -42,8 +42,10 @@ The following features can be found after running the script:
 9. tBodyAccMag
 10. fBodyAccJerkMag
 
-The intitial "t" and "f" stand for time and frequency measured by accelerometer "acc" and gyroscope "Gyro". The body "Body" and gravity "Gravity" acceleration have been stored in different feature. Features with "-XYZ" indicates that the three-axis can be found separately, for instance, tBodyAcc-X, tBodyAcc-Y and tBodyAcc-Z. The magnitude of these three-dimensional signals can be found in features tBodyAccMag and tBodyAccJerkMag. 
+The intitial "t" and "f" stand for time and frequency measured by accelerometer "acc" and gyroscope "Gyro". The body "Body" and gravity "Gravity" acceleration have been stored in different features. Features with "-XYZ" indicates that the three-axis measurements can be found separately, for instance, tBodyAcc-X, tBodyAcc-Y and tBodyAcc-Z. The magnitude of these three-dimensional signals can be found in features tBodyAccMag and tBodyAccJerkMag. 
 
 The principal outcome of the script are the variables "complete_data_test" and "Complete_subset". This two data.frames include:
 1. "complete_data_test": mean value "mean()" and the satandard deviation "std()" observations of each feature by activities (Please check file "activity_labels" inlcuded in the zip file).
 2. "Complete_subset": average of the observations by activity.
+
+Please check the txt files include in the zip file for further information of the above features.
