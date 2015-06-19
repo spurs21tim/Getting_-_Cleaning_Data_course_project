@@ -1,8 +1,4 @@
-# Description of the Scrip performance by task
-
-######################################################
-###### Course Project Getting and Cleaning Data ######
-######################################################
+#### Course Project Getting and Cleaning Data
 
 The following explanation has been included in the R code to help readers to understand the aim
 of each code line.
