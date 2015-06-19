@@ -3,17 +3,17 @@
 The following explanation has been included in the R code to help readers to understand the aim
 of each code line.Be aware to load al the necesary libraries to run the code without error messages. 
 
-# Before starting I have created a folder to save the data needed for the project
-# and set the path to run into the scrip. Please be aware of changing the path in which 
-# you have saved your files in your computer.
-# My path: "C:/~~/Coursera/GettingandCleaningData/Course_Project/UCI_HAR_Dataset"
+Before starting I have created a folder to save the data needed for the project
+and set the path to run into the scrip. Please be aware of changing the path in which 
+you have saved your files in your computer.
+My path: "C:/~~/Coursera/GettingandCleaningData/Course_Project/UCI_HAR_Dataset"
 
 #### First taks: Merges the training and the test sets to create one data set;
-# Accordign the "README.txt" only files "X_text.txt" in both, train and test folders, 
-# contains sets of data which variables are listed in "feautres.txt". Therefore, 
-# I only merge this to files into one. We can check that by reading into R the
-# txt files. For instance: "features.txt" have 561 objectes that coressponds to 
-# the 561 varaibles of "x.train.txt".
+Accordign the "README.txt" only files "X_text.txt" in both, train and test folders, 
+contains sets of data which variables are listed in "feautres.txt". Therefore, 
+I only merge this to files into one. We can check that by reading into R the
+txt files. For instance: "features.txt" have 561 objectes that coressponds to 
+the 561 varaibles of "x.train.txt".
 
 # Steps: 
 ## 1. Selection of train and test files and reading both tables (read.table)
