@@ -53,3 +53,5 @@ Arrange the data in order to be able to calculate the mean of each variable acco
 4. Merging previous values
 5. Final subset
 6. Writing the table
+
+####The principal outcome of the script are the variables "complete_data_test" and "Complete_subset". 
